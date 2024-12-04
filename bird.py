@@ -1,9 +1,5 @@
 import pygame
-
-WINDOW_HEIGHT = 600
-BIRD_COLOR = (250, 0, 0)
-BIRD_HEIGHT = 40
-BIRD_WIDTH = 40
+from contants import BIRD_COLOR, WINDOW_HEIGHT
 
 class Bird:
     def __init__(self, a, b, width, height):
@@ -35,3 +31,4 @@ class Bird:
         elif self.y >= WINDOW_HEIGHT - self.height:  # Keep the bird within the screen
             self.y = WINDOW_HEIGHT - self.height
             self.velocity = 0
+    
