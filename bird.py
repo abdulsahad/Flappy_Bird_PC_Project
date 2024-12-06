@@ -25,10 +25,13 @@ class Bird:
         self.y += self.velocity  # Update the bird's vertical position
 
         # Prevent the bird from moving out of boundries
-        if self.y <= 0:  
+        if self.y <= 0:
+            # If the position of the bird is at or higher than the top of the screen
+            # make its position at the top boundary and stop upwards moving.
             self.y = 0
             self.velocity = 0
-        elif self.y >= WINDOW_HEIGHT - self.height:  # Keep the bird within the screen
+        elif self.y >= WINDOW_HEIGHT - self.height:
+           #If the position of the bird is at or below the bottom boundary of the screen
+           #make it so it sets its position on the bottom boundary and cease to fall down.
             self.y = WINDOW_HEIGHT - self.height
             self.velocity = 0
-    
